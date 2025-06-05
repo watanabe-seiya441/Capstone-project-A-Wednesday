@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Main</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+        
+
+        <!-- D3 v3をd3としてインポート  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://d3js.org/queue.v1.min.js"></script>
+        <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+        <script>
+            var d3v3 = d3; // D3 v3をd3v3としてインポート
+            d3 = null;
+        </script>
+
+        <!-- D3 v7をd3としてインポート -->
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script type="text/javascript" src="./js/topojson.js" charset="utf-8"></script>
+
+        <!-- カルトグラムを書く関数をインポート -->
+        <script src="./cartogram/d3_cartogram/cartogram.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- <script src="./js/createCartogramWorldMap.js"></script> -->
+
+        <!-- <div id="mapWrapper"> -->
+        <!-- 文字の位置を制御-->
+        <div id="MainWindow">
+            <div  style="position: absolute; top: 0; left: 0; width: 600px; height: 700px;">
+                <!-- 世界地図を作成 ここのdivコメントアウトするとカルトグラム-->
+                <div class="UpperLeftWindow" id="WorldMap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin:15px; background-color: #f7f3ed;">  
+                </div>
+
+                <!-- カルトグラムを作成  ここのdivをコメントアウトすると普通の世界地図-->
+                <div class="UpperLeftWindow" id="CartogramWorldMap" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin:15px; background-color: #f7f3ed;" > 
+
+                    <div style="text-align: center; margin: 20px 0;">
+                        <label for="year" style="font-size: 20px;">年:</label>
+                        <select id="year" style="font-size: 20px; width: 200px; height: 40px;"></select>
+                    </div>
+
+                    <div id="map-container" style="margin-bottom: 20px;width: 600px; height: 700px;">
+                        <svg id="map"></svg>
+                    </div>
+                    <script src="./js/createCartogramWorldMap.js"></script> 
+                </div>
+
+                <div style="text-align: center; margin: 20px 0; z-index: 200;">
+                    <button id="toggleMap" style="font-size: 20px; bottom: 50px; width: 200px; height: 40px; z-index: 205; color: aqua">地図切り替え</button>
+                </div>
+            </div>
+
+            <div  style="position: absolute; top: 0; left: 615px; width: 600px; height: 210px;">
+                <div class="UpperRightWindow" id="ThreeCircles" style="height: 100%; width:100%; margin:15px; background-color: white;">
+                    <!-- 国の詳細ページのボタンを追加 -->
+                    <button class="button Mainbotton" onclick="redirectToCountryDetail()" style="z-index: 100; position: absolute; right: 100px; bottom: 0px;">注目している国の詳細を見る</button>
+                </div>
+            </div>
+
+            <div style="position: absolute; top: 215px; left: 615px; width: 600px; height: 480px;">
+                <div class="DownWindow" id="News" style="height: 100%; width:100%; margin:15px; background-color: white;  overflow:auto">
+                    <div>
+                        <h3 style="margin:1em;">News</h3>
+                        <ol id = "NewsContent" role="list">
+                            <li>
+                                <div style="display:flex;">
+                                    <h3>News Title</h3>
+                                    <span class="countryName">Japan</span>
+                                    <span class="date">2023-01-01</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./js/SplitScreen0.js"></script>
+
+        <script type="text/javascript">
+            function redirectToCountryDetail() {
+                const year = document.getElementsByClassName("year")[0].textContent;
+                const country = document.getElementsByClassName("countryName")[0].value;
+                window.location.href = `countryDetail.html?country=${encodeURIComponent(country)}&year=${encodeURIComponent(year)}`;
+            }
+        </script>
+    </body>
+
+</html>

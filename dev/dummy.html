@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Wateract</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script type="text/javascript" src="./js/topojson.js" charset="utf-8"></script>
+
+        <!-- TODO: ./js/main.js を改変する -->
+        <script type="module" src="./js/index.js"></script>
+        <!-- <script type="text/javascript" src="./js/donation.js"></script> -->
+    </body>
+    <!-- ボタンを追加 -->
+    <button onclick="redirectToCountryDetail()">Country Detail</button>
+
+    <script type="text/javascript">
+        function redirectToCountryDetail() {
+            // countryDetail.htmlにリダイレクト
+            window.location.href = 'countryDetail.html';
+        }
+    </script>
+</html>

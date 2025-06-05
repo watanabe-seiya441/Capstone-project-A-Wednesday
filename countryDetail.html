@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Wateract</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/sanitize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script type="text/javascript" src="./js/topojson.js" charset="utf-8"></script>
+        <style>
+
+        
+        </style>
+        <!-- 文字の位置を制御-->
+        <div id="MainWindow">
+            <div style="position: absolute; top: 0px; left: 0; width: 240px; height: 330px; margin:15px; background: white;">
+                <div class="infoPanel">
+                    <h1 class="country">China</h1>
+                    <h1 class="year">2020</h1>
+                    <button class="buttonCountryDetail" onclick="redirectToHome()" >メインに戻る</button>
+                </div>
+            </div>
+            <div style="position: absolute; top: 0px; left: 250px; width: 480px; height: 330px; margin:15px; background: white;">
+                <div class="countryWindow" style="height:100%; width:100%;" >
+                    <h3 style="padding:1em;">Temporal</h3>  
+                </div>
+            </div>
+            <div style="position: absolute; top: 350px; left: 0; width: 360px; height: 350px; margin:15px; background: white;">
+                <div id="comparisonWindow" style="height:100%; width:100%; top:auto; left:auto;">
+                    <h3 style="margin:1em;">International</h3>  
+                </div>
+            </div>
+            <div style="position: absolute; top: 350px; left: 370px; width: 360px; height: 350px; margin:15px; background: white;">
+                <div class="ratioWindow" style="height:100%; width:100%">  
+                    <h3 style="padding:1em;">Ratio</h3>
+                </div>
+            </div>
+            <div style="position: absolute; top: 0px; left: 740px; width: 400px; height: 700px; margin:15px; background: white;">
+                <div style="height: 100%; width:100%; overflow:auto">
+                    <div>
+                        <h3 style="margin:1em;">News</h3>
+                        <ol id = "NewsContent" role="list">
+                            <li>
+                                <div style="display:flex;">
+                                    <h3>News Title</h3>
+                                    <span class="countryName">Japan</span>
+                                    <span class="date">2023-01-01</span>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./js/countryDetail.js"></script>
+    </body>
+
+
+    <script type="text/javascript">
+        // countryDetail.html ページ内の JavaScript
+        // クエリパラメータから国の情報を取得
+        const urlParams = new URLSearchParams(window.location.search);
+        const country = urlParams.get('country');
+        const year = urlParams.get('year');
+
+        document.querySelector('.country').innerText = country;
+        document.querySelector('.year').innerText = year;
+
+
+        function redirectToHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</html>

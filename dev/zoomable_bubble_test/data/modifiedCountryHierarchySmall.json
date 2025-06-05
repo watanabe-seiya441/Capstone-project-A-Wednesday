@@ -1,0 +1,28 @@
+{
+  "children": [
+    {
+      "children": [
+        {
+          "id": "Kazakhstan"
+        },
+        {
+          "id": "Kyrgyzstan"
+        }
+      ],
+      "id": "Europe"
+    },
+    {
+      "children": [
+        {
+          "id": "Kazakhstan"
+        },
+        {
+          "id": "Kyrgyzstan"
+        }
+      ],
+      "id": "Asia"
+    }
+  ],
+  
+  "id": "World"
+}

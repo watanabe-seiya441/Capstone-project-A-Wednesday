@@ -1,0 +1,42 @@
+{
+    "name": "flare",
+    "children": [
+     {
+      "name": "Asia",
+      "children": [
+       {
+        "name": "EastAsia",
+        "children": [
+         {"name": "Japan", "value": 3938},
+         {"name": "China", "value": 2000},
+         {"name": "Korea", "value": 6714}
+        ]
+       },
+       {
+        "name": "WestAsia",
+        "children": [
+         {"name": "SaudiArabia", "value": 3534},
+         {"name": "Iraq", "value": 5731}
+        ]
+       }]
+     },
+     {
+       "name": "Europe",
+       "children": [
+        {
+         "name": "Russia",
+         "children": [
+          {"name": "Russia", "value": 3938}
+         ]
+        },
+        {
+         "name": "EastEurope",
+         "children": [
+          {"name": "Poland", "value": 3534},
+          {"name": "Germany", "value": 5731}
+         ]
+        }
+      ]
+     }
+    ]
+}

@@ -1,0 +1,348 @@
+/* CSS を当てたい場合はここに書く */
+/* Example */
+
+body {
+    background-color: #e5e8ec;
+
+}
+
+.WorldMap_Box{
+  border-radius: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 120px;
+    height: 10px;
+    color: #333;
+    font-size: 10px;
+    font-weight: 700;
+    background-color: #44bbbf;
+    box-shadow: 0 5px 0 #e5e8ec;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .buttonCountryDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em; /* パディングを調整してボタンの大きさを増やす */
+    width: auto; /* 幅を自動に設定 */
+    height: 40px; /* 高さを調整 */
+    color: #333;
+    font-size: 16px; /* フォントサイズを大きくする */
+    font-weight: 700;
+    background-color: #44bbbf;
+    box-shadow: 0 5px 0 #e5e8ec;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.infoPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 内容を上部に揃える */
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+}
+
+.country {
+    font-size: clamp(12px, 2.0vw, 32px);
+    line-height: 1.1;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin-top: 10%; /* 国名の位置を上に調整 */
+    margin-bottom: 5%; /* 国名と年の間のスペース */
+}
+.year{
+    font-size: 40px;
+    line-height: 1.1;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin-top: 10%; /* 年の位置を下に調整 */
+    margin-bottom: 20%; /* 年とボタンの間のスペース */
+}
+  
+.button::after {
+content: '';
+width: 5px;
+height: 5px;
+border-top: 3px solid #333333;
+border-right: 3px solid #333333;
+transform: rotate(45deg);
+}
+
+.button:hover {
+transform: translateY(3px);
+text-decoration: none;
+box-shadow: 0 2px 0 #aaaaaa;
+}
+
+.Mainbotton {
+  width: 185px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 100;
+  color: #2C2C2C;
+  margin: 20px 25px;
+}
+
+a {
+  text-decoration:none;
+  color:#3476CA;
+  
+  &:hover {
+    color:#6CB5F3;
+  }
+}
+
+.open{
+  position:fixed;
+  width:100px;
+  height:40px;
+  left:50%;
+  top:-1000px;
+  margin-left:-80px;
+  margin-top:-30px;
+  border:1px solid #ccc;
+  background-color:#fff;
+  border-radius:6px;
+  padding:10px 30px;
+  color:#444;
+  transition:all ease-out .6s;
+  
+  &:hover {
+    border:1px solid #aaa;
+    box-shadow:0 0 8px #ccc inset;
+    transition:all ease-out .6s;
+  }
+}
+
+.container {
+  position:fixed;
+  width:auto;
+  height:auto;
+  left:50%;
+  top:50%;
+  margin-top:-119px;
+  margin-left:-200px;
+  padding:10px;
+  background-color:rgb(237, 236, 236);
+  border-radius:0.25rem;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #44bbbf;
+  }
+
+  & h3 {
+    /* font-size:20px; */
+    /* font-weight: bolder; */
+    /* color: #44bbbf; */
+    /* left: auto; */
+    float: left;
+    /* text-align: center; */
+    margin: 0 1rem 1rem 2rem;
+    color: rgb(70 70 70);
+  }
+  
+  & p {
+    width:350px;
+    font-size: 16px;
+    /* color: #a8aab2; */
+    /* font-weight: 400; */
+    /* line-height: 28px; */
+    margin: 0;
+    line-height: 1.6;
+    float:left;
+  }
+}
+
+.close {
+  cursor:pointer;
+
+  &::before, &::after{
+    content: "";
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    top: 26px;
+    right: 31px;
+    border-top: 2px solid #7c7c7c;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  &::before {
+    right: 40px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+}
+.btn {
+  flex:0 0 auto;
+  background-color:#6cb5f3;
+  border:0;
+  padding: 10px;
+  margin: 0em 1em;
+  text-transform:uppercase;
+  color:#fff;
+  font-weight:bold;
+  border-bottom-right-radius:6px;
+  cursor:pointer;
+  transition:all .3s;
+  border-radius: 3px;
+}
+.btn:hover {
+  background-color:#6BA5D6;
+  transition:all .3s;
+}
+.btn:active {
+  background-color:#5F8AAF;
+}
+
+.slider-container {
+  width:350px;
+  margin:0 25px;
+  overflow:hidden;
+}
+.slider-turn{
+  width:10000px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  background: #44bbbf;
+  /* height: 14px; */
+  width: 100%;
+  border-radius: 10px;
+  border: solid 2px #dff1ff;
+
+  /* WebKit向けのつまみ */
+  .slider:-webkit-slider-thumb {
+    -webkit-appearance: none; /*  デフォルトのつまみのスタイルを解除 */
+    background-color: white; /* 背景色 */
+    width: 24px; /* 幅 */
+    height: 24px; /* 高さ */
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  }
+/* Moz向けのつまみ */
+  .slider::-moz-range-thumb {
+    background:white; /* 背景色 */
+    width: 24px; /* 幅 */
+    height: 24px; /* 高さ */
+    border-radius: 50%; /* 円形に */
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+    border: none; /* デフォルトの線を消す */
+  }
+  /* Firefoxで点線が周りに表示されてしまう問題の解消 */
+  .slider::-moz-focus-outer {
+    border: 0;
+  }
+  /* つまみをドラッグしているときのスタイル */
+  .slider:active::-webkit-slider-thumb {
+    box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+  }
+  }
+
+p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+ol {
+	list-style: none;
+	counter-reset: list;
+	padding: 0 1rem;
+}
+
+li {
+	position: relative;
+	max-width: 45rem;
+	margin: 1rem auto;
+	padding: 1rem 1rem 1rem 2rem;
+	/* box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3); */
+	border-radius: 0.25rem;
+	overflow: hidden;
+	background-color: rgb(237, 236, 236);
+}
+
+li::before {
+	content: '';
+	display: block;
+  width: 1rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  background: #44bbbf;
+}
+
+
+h1 {
+  font-size:50px;
+  font-weight: bolder;
+  color: #44bbbf;
+}
+
+h3{
+  display: flex;
+  margin: 0 1rem 1rem 0;
+  color: rgb(70 70 70);
+}
+
+#NewsContent h3{
+  display: flex;
+  margin: 0 1rem 1rem 0;
+  color: rgb(70 70 70);
+}
+
+#NewsContent .countryName {
+    text-align: right;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 150px; /* 固定の幅を設定 */
+    font-size: 14px; /* フォントサイズを調整 */
+    line-height: 1.2; /* 行の高さを調整 */
+     margin-top: 5%; /* 国名の位置を上に調整 */
+     margin-bottom: 5%;
+  }
+  
+  
+
+#NewsContent .date{
+  text-align: right;
+  white-space: nowrap;
+}

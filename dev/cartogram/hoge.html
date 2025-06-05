@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>カートグラム地図</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- D3 v3をd3v3としてインポート -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script>
+        var d3v3 = d3;
+    </script>
+    <!-- D3 v6をd3としてインポート -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
+    <script src="./d3_cartogram/cartogram.js"></script>
+</head>
+<body>
+    <!-- 年の選択ボタンをページの最上部に表示 -->
+    <div style="text-align: center; margin: 20px 0;">
+        <label for="year" style="font-size: 20px;">年:</label>
+        <select id="year" style="font-size: 20px; width: 200px; height: 40px;"></select>
+    </div>
+
+    <div id="map-container" style="margin-bottom: 20px;">
+        <svg id="map"></svg>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

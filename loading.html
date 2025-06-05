@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>loading</title>
+    <link rel="stylesheet" type="text/css" href="../css/loading.css">
+</head>
+<body>
+    <div class="drop"></div>
+    <div class="wave"></div>
+    <img src="../resources/icon_goals06.png" style="position: fixed; left: 50%; transform: translateX(-50%) scale(0.23); z-index: 9999;">
+    <script>
+    window.onload = function() {
+        var h = window.innerHeight;
+        var img = document.querySelector('img');
+        img.style.bottom = (h / 4 - img.offsetHeight / 2) * 0.8 + 'px';
+    };
+    </script>
+</body>
+</html>
