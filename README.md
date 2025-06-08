@@ -1,6 +1,4 @@
-# 水資源の可視化
-
-## Capstone-project-A-Wednesday
+# 水資源の可視化(Capstone-project-A-Wednesday)
 ## members
 - 03220431 Shiho Sugiyama @ss-cosmos-hue 
 - 03230447 Yuhi Hasegawa @ut-y-h
