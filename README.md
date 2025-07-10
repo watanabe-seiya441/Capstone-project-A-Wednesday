@@ -5,7 +5,7 @@
 - 03230460 Seiya Watanabe @watanabe-seiya441
 
 ## デモ
-[デモ動画](https://drive.google.com/drive/u/0/folders/1G9MDxbinkOYlOnrg2HUulUat__JhGqBn)
+[デモ動画](https://drive.google.com/file/d/1ONnGAcdKU4VI50IioLi7tGktsXvStGcP/view?usp=sharing)
 
 ## 使い方
 - index.htmlを開くとメイン画面が開きます。  
